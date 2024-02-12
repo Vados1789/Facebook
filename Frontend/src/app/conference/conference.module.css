@@ -1,0 +1,41 @@
+.bgWrap {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+.bgHeader {
+    margin: 0;
+    padding-top: 25px;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 45px;
+    text-align: center;
+    color: #000000;
+}
+.bgText {
+    margin: 0;
+    font-size: 30px;
+    padding-top: 25px;
+    text-align: center;
+    font-style: italic;
+    color: #fff;
+}
+.bgLinks {
+    text-decoration: none;
+    color: #fff;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    text-align: center; 
+    z-index: 1;
+}
