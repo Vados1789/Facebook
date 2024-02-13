@@ -1,12 +1,25 @@
 import Link from "next/link";
+import styles from "../conference.module.css";
 
-export default function Page() {
+async function fetchSpeakers() {
+    const speakersData = require("./speakers.json");
+    return speakersData;
+}
+
+export default async function Page() {
+    const data = await fetchSpeakers();
     return (
         <>
             <h1>Welcome to Speakers</h1>
             <h2>
                 <Link href="/conference">Conference</Link>
             </h2>
+            {data.speakers.map(({id, name, bio}) => (
+                <div key={id} className={styles.infoContainer}>
+                    <h3 className={styles.tittleText}>{name}</h3>
+                    <h5 className={styles.descText}>{bio}</h5>
+                </div>
+            ))}
         </>
     );
 }
