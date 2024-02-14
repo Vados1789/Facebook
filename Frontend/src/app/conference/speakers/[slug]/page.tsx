@@ -1,12 +1,14 @@
-import speakerJson  from "../speakers.js";
+import speakerJson  from "../speakers.json";
 import styles from "../../conference.module.css";
 
 function fetchSpeakersInfo(params) {
     // fetch api call, DB query, retrieve datadev
-    const speakerInfo = speakerJson.find(
-        (speaker) => speaker.name === params.slug
+    const decodedSlug = decodeURIComponent(params.slug);
+
+    // Find the speaker whose name matches the decoded slug
+    const speakerInfo = speakerJson.speakers.find(
+        (speaker) => speaker.name === decodedSlug
     );
-    console.log('info', speakerInfo);
 
     return speakerInfo;
 }
