@@ -31,7 +31,17 @@ export default function Page() {
                     </Link>
                 </h2>
                 </div>
-            </div>        
+            </div>
+            <h2>
+                <Link href="/conference/sessions">
+                    Sessions
+                </Link>
+            </h2>
+            <h2>
+                <Link href="/conference/speakers">
+                    Speakers
+                </Link>
+            </h2>        
         </>
     );
 }
